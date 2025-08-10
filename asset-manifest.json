@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/brain-buzz-ui/static/css/main.573c81d7.css",
+    "main.js": "/brain-buzz-ui/static/js/main.0a261a34.js",
+    "static/js/453.8b51f560.chunk.js": "/brain-buzz-ui/static/js/453.8b51f560.chunk.js",
+    "index.html": "/brain-buzz-ui/index.html",
+    "main.573c81d7.css.map": "/brain-buzz-ui/static/css/main.573c81d7.css.map",
+    "main.0a261a34.js.map": "/brain-buzz-ui/static/js/main.0a261a34.js.map",
+    "453.8b51f560.chunk.js.map": "/brain-buzz-ui/static/js/453.8b51f560.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.573c81d7.css",
+    "static/js/main.0a261a34.js"
+  ]
+}
