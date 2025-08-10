@@ -96,7 +96,7 @@ function QuizWrapper({ socket }) {
     socket.send(
       JSON.stringify({
         type: "joinQuiz",
-        data: { ...user, category: categoryName, roomId: room },
+        data: { ...user, category: categoryName || 'friends', roomId: room },
       })
     );
     setIsWaitingRoom(true);
@@ -215,7 +215,7 @@ export default function App() {
   }, []);
 
   return (
-    <Router>
+    <Router basename="/brain-buzz-ui">
       <Routes>
         <Route
           path="/:categoryName"
