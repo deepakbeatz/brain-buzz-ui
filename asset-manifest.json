@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/brain-buzz-ui/static/css/main.573c81d7.css",
-    "main.js": "/brain-buzz-ui/static/js/main.9e4a7f27.js",
+    "main.js": "/brain-buzz-ui/static/js/main.81528db9.js",
     "static/js/453.8b51f560.chunk.js": "/brain-buzz-ui/static/js/453.8b51f560.chunk.js",
     "index.html": "/brain-buzz-ui/index.html",
     "main.573c81d7.css.map": "/brain-buzz-ui/static/css/main.573c81d7.css.map",
-    "main.9e4a7f27.js.map": "/brain-buzz-ui/static/js/main.9e4a7f27.js.map",
+    "main.81528db9.js.map": "/brain-buzz-ui/static/js/main.81528db9.js.map",
     "453.8b51f560.chunk.js.map": "/brain-buzz-ui/static/js/453.8b51f560.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.573c81d7.css",
-    "static/js/main.9e4a7f27.js"
+    "static/js/main.81528db9.js"
   ]
 }
