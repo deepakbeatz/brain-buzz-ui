@@ -198,20 +198,20 @@ export default function App() {
   const [socket, setSocket] = useState(null);
 
   useEffect(() => {
-    const s = new WebSocket("ws://localhost:4000");
-    setSocket(s);
+    const socket = new WebSocket("wss://brain-buzz-server.onrender.com");
+    setSocket(socket);
 
-    s.onopen = () => {
+    socket.onopen = () => {
       console.log("WebSocket connection opened");
     };
-    s.onclose = () => {
+    socket.onclose = () => {
       console.log("WebSocket connection closed");
     };
-    s.onerror = (error) => {
+    socket.onerror = (error) => {
       console.error("WebSocket error:", error);
     };
 
-    return () => s.close();
+    return () => socket.close();
   }, []);
 
   return (
