@@ -218,7 +218,7 @@ export default function App() {
     <Router basename="/brain-buzz-ui">
       <Routes>
         <Route
-          path="/:categoryName"
+          path=":categoryName"
           element={<QuizWrapper socket={socket} />}
         />
       </Routes>
