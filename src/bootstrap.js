@@ -14,17 +14,16 @@ function QuizWrapper({ socket }) {
   const { categoryName } = useParams();
 
   const [userData, setUserData] = useState({});
-  const [roomId, setRoomId] = useState(""); // NEW: store room ID
+  const [roomId, setRoomId] = useState("");
   const [quizState, setQuizState] = useState(null);
   const [isQuizOver, setIsQuizOver] = useState(false);
   const [isWaitingRoom, setIsWaitingRoom] = useState(false);
   const [timer, setTimer] = useState(0);
 
   const isUserDataEmpty = useCallback(() => {
-    return !userData.name || !roomId; // also require roomId
+    return !userData.name || !roomId;
   }, [userData, roomId]);
 
-  // Handle native WebSocket messages
   useEffect(() => {
     if (!socket) return;
 
@@ -40,7 +39,7 @@ function QuizWrapper({ socket }) {
 
           case "quizStart":
             setIsWaitingRoom(false);
-            setQuizState(msg.state || {}); // full reset for start
+            setQuizState(msg.state || {});
             setTimer(msg?.state?.timer || 0);
             break;
 
@@ -64,7 +63,7 @@ function QuizWrapper({ socket }) {
             setQuizState((state) => ({
               ...state,
               leaderboard: msg?.state?.leaderboard || [],
-              question: null, // no more questions
+              question: null,
               timer: 0,
             }));
             setIsQuizOver(true);
@@ -87,7 +86,6 @@ function QuizWrapper({ socket }) {
     };
   }, [socket]);
 
-  // Modified startQuiz to include roomId
   const startQuiz = (user, room) => {
     if (!socket || socket.readyState !== WebSocket.OPEN) {
       console.error("WebSocket is not connected");
@@ -102,7 +100,6 @@ function QuizWrapper({ socket }) {
     setIsWaitingRoom(true);
   };
 
-  // sendAnswer includes roomId now
   const sendAnswer = (optionIndex, time) => {
     if (!socket || socket.readyState !== WebSocket.OPEN) {
       console.error("WebSocket is not connected");
